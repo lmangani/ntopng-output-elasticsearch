@@ -25,10 +25,17 @@
                       "type": "geo_point"
                 }
              }
+       }, {
+             "ip_fields" : {
+               "match" : "IPV4_*",
+               "match_mapping_type" : "string",
+               "mapping": {
+                      "type": "ip"
+                }
+             }
        } ],
        "properties" : {
-         "@version": { "type": "string", "index": "not_analyzed" },
-         "IPV4_*": { "type": "ip", "index": "not_analyzed" }
+         "@version": { "type": "string", "index": "not_analyzed" }
        }
     }
   }
