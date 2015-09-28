@@ -20,7 +20,6 @@
        }, {
              "geo_fields" : {
                "match" : "*_IP_LOCATION",
-               "match_mapping_type" : "number",
                "mapping": {
                       "type": "geo_point"
                 }
